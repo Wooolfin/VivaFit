@@ -45,7 +45,7 @@ export default StyleSheet.create({
     },
     imgLogin:{
         justifyContent:'flex-start',   
-        
+        marginTop: 48,
     },
     contLogin:{
         marginTop: 180,
@@ -55,5 +55,9 @@ export default StyleSheet.create({
         gap: 24,
         borderRadius: 30,
 
+    },
+    textLogin:{
+        fontSize: 16,
+        color: '#FFF'
     }
 });

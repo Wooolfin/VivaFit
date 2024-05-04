@@ -17,10 +17,12 @@ export default function Home({ navigation }){
         <View style={styles.container}>
                 <Image
                     style={styles.imgLogin}
-                    source={require('./../../../assets/imgUser.png')} 
+                    source={require('./../../../assets/imgLogo.png')} 
                 />
             <View style={styles.contLogin}>
                     <TextInput 
+                        value={busca}
+                        onChangeText={(text) => setBusca(text)}
                         style={styles.usuario}
                         placeholder = "E-mail"
                         placeholderTextColor="#FFFFFF"
@@ -32,13 +34,14 @@ export default function Home({ navigation }){
                     />
                     <TouchableOpacity
                         style={styles.login}>
-                        <Text>
+                        <Text style={styles.textLogin}>
                             Entrar
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
+                        onPress={acessarCadastro}
                         style={styles.cadastro}>
-                        <Text>
+                        <Text style={styles.textLogin}>
                             Cadastre-se
                         </Text>
                     </TouchableOpacity>
