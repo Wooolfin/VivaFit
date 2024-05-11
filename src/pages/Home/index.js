@@ -6,6 +6,10 @@ import { useState } from "react";
 export default function Home({ navigation }){
 
     const [busca, setBusca] = useState('');
+    const [texto, setTextoema] = useState('');
+    const [texto1, setTextosen] = useState('');
+    const [mensagem, setMensagem] = useState('');
+
     function acessarCadastro(){
         navigation.navigate(
             'Cadastro',
@@ -13,6 +17,16 @@ export default function Home({ navigation }){
         );
 
     }
+
+    function validar(){
+        if(texto == '' || texto1 == ''){
+          setMensagem('Preencha todos os campos!');
+        }else{
+          navigation.navigate('Tela3', { search: texto})
+        }
+    }
+    
+
     return(
         <View style={styles.container}>
                 <Image
@@ -21,25 +35,31 @@ export default function Home({ navigation }){
                 />
             <View style={styles.contLogin}>
                     <TextInput 
-                        value={busca}
-                        onChangeText={(text) => setBusca(text)}
+                        // value={busca}
+                        // onChangeText={(text) => setBusca(text)}
+                        value={texto}
+                        onChangeText={(texto) => setTextoema(texto)}
                         style={styles.usuario}
                         placeholder = "E-mail"
                         placeholderTextColor="#FFFFFF"
                     />
                     <TextInput 
+                        value={texto1}
+                        onChangeText={(texto1) => setTextosen(texto1)}
                         style={styles.senha}
                         placeholder = "Senha"
                         placeholderTextColor="#FFFFFF"
                     />
+                    <Text style={styles.textCampo}>{mensagem}</Text>
                     <TouchableOpacity
+                        onPress={validar}
                         style={styles.login}>
                         <Text style={styles.textLogin}>
                             Entrar
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={acessarCadastro}
+                        onPress={acessarCadastro} 
                         style={styles.cadastro}>
                         <Text style={styles.textLogin}>
                             Cadastre-se

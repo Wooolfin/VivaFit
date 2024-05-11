@@ -5,15 +5,16 @@ export default StyleSheet.create({
         flex:1,
         alignItems:'center',
         backgroundColor: '#1C2126',
-        
     },
     usuario:{
         borderBottomWidth:1,
         borderBottomColor: '#FFFFFF',
+        color: '#FFF'
     },
     senha:{
         borderBottomWidth:1,
         borderBottomColor: '#FFFFFF',
+        color: '#FFF'
     },
     login:{
         paddingHorizontal: 16,
@@ -48,16 +49,25 @@ export default StyleSheet.create({
         marginTop: 48,
     },
     contLogin:{
-        marginTop: 180,
+        marginTop: 100,
         justifyContent:'flex-end',
         backgroundColor:'#37414B',
         padding: 48,
         gap: 24,
-        borderRadius: 30,
+        borderRadius: 30
 
     },
     textLogin:{
         fontSize: 16,
-        color: '#FFF'
+        color: '#FFF',
+        fontWeight: 'bold'
+    },
+    textCampo:{
+        fontSize: 12,
+        color: '#FFF',
+        backgroundColor:'#FF0000',
+        textAlign: 'center',
+        borderRadius: 30,
+        fontWeight: 'bold'
     }
 });

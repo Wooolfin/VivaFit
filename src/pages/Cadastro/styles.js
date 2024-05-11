@@ -10,10 +10,12 @@ export default StyleSheet.create({
     usuario:{
         borderBottomWidth:1,
         borderBottomColor: '#FFFFFF',
+        color: '#FFF'
     },
     senha:{
         borderBottomWidth:1,
         borderBottomColor: '#FFFFFF',
+        color: '#FFF'
     },
     login:{
         paddingHorizontal: 16,
@@ -45,22 +47,29 @@ export default StyleSheet.create({
     },
     imgLogin:{
         justifyContent:'flex-start',
-        marginTop: 48,
+        // marginTop: 48,
     },
     contLogin:{
-        marginTop: 40,
         justifyContent:'flex-end',
         backgroundColor:'#37414B',
         padding: 48,
-        gap: 24,
+        gap: 18,
         borderRadius: 30,
     },
     textCad:{
-        fontSize: 48,
-        color: '#FFF',
+        fontSize: 36,
+        color: '#FFF'
     },
     textLogin:{
         fontSize: 16,
         color: '#FFF'
+    },
+    textCampo:{
+        fontSize: 12,
+        color: '#FFF',
+        backgroundColor:'#FF0000',
+        textAlign: 'center',
+        borderRadius: 30,
+        fontWeight: 'bold'
     }
 });
